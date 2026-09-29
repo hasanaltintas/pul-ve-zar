@@ -1,49 +1,173 @@
-<!DOCTYPE html>
-<html lang="tr">
+<!doctype html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Pul ve Zar – Gizlilik Politikası / Checkers and Dice – Privacy Policy</title>
+<title>Checkers and Dice – Privacy Policy</title>
+<meta name="description" content="Checkers and Dice: three-dimensional Turkish backgammon for the Mac. Turkish and international rules, a strong computer opponent, seven languages.">
+<meta name="theme-color" content="#100d0a">
+<meta property="og:type" content="website"><meta property="og:url" content="https://hasanaltintas.github.io/pul-ve-zar/privacy-policy.html"><meta property="og:title" content="Checkers and Dice – Privacy Policy"><meta property="og:description" content="Checkers and Dice: three-dimensional Turkish backgammon for the Mac. Turkish and international rules, a strong computer opponent, seven languages."><meta property="og:image" content="https://hasanaltintas.github.io/pul-ve-zar/gorsel/en/08.jpg"><meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="simge.png"><link rel="apple-touch-icon" href="simge.png">
+<link rel="alternate" hreflang="tr" href="https://hasanaltintas.github.io/pul-ve-zar/privacy-policy.html?lang=tr"><link rel="alternate" hreflang="en" href="https://hasanaltintas.github.io/pul-ve-zar/privacy-policy.html?lang=en"><link rel="alternate" hreflang="fr" href="https://hasanaltintas.github.io/pul-ve-zar/privacy-policy.html?lang=fr"><link rel="alternate" hreflang="de" href="https://hasanaltintas.github.io/pul-ve-zar/privacy-policy.html?lang=de"><link rel="alternate" hreflang="es" href="https://hasanaltintas.github.io/pul-ve-zar/privacy-policy.html?lang=es"><link rel="alternate" hreflang="pt" href="https://hasanaltintas.github.io/pul-ve-zar/privacy-policy.html?lang=pt"><link rel="alternate" hreflang="it" href="https://hasanaltintas.github.io/pul-ve-zar/privacy-policy.html?lang=it">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300..700;1,9..144,300..700&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;1,400&family=Literata:ital,opsz,wght@0,7..72,300..700;1,7..72,300..700&display=swap">
 <style>
-  :root { color-scheme: light dark; }
-  body { font-family: -apple-system, "Helvetica Neue", Helvetica, Arial, sans-serif; max-width: 42rem; margin: 3rem auto; padding: 0 1.25rem; line-height: 1.55; }
-  h1 { font-size: 1.6rem; margin-bottom: 0.25rem; }
-  h2 { font-size: 1.2rem; margin-top: 2.5rem; }
-  .date { opacity: 0.65; font-size: 0.95rem; }
-  ul { padding-left: 1.25rem; }
-  li { margin: 0.35rem 0; }
-  hr { border: 0; border-top: 1px solid rgba(128,128,128,0.35); margin: 2.5rem 0; }
+:root {
+  --kagit: #f2f0ea; --kagit-2: #e8e3d7; --murekkep: #221c16; --soluk: #625a4f; --cizgi: #d3cbbd;
+  --cuha: #1d5847; --pirinc: #8a6428; --gece: #100d0a; --gece-2: #1d1813; --gece-yazi: #f5efe3; --gece-soluk: #c9bfae;
+  --gece-vurgu: #dcbb7c; --golge: rgba(20, 14, 8, 0.28);
+  --baslik: "Fraunces", "Iowan Old Style", "Palatino", Georgia, serif;
+  --govde: "Literata", "Iowan Old Style", "Palatino", Georgia, serif;
+  --yardimci: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  color-scheme: light;
+}
+@media (prefers-color-scheme: dark) {
+  :root { --kagit: #15120f; --kagit-2: #201b16; --murekkep: #ece5d7; --soluk: #b4a996; --cizgi: #3c342b;
+          --cuha: #7cc0a6; --pirinc: #d6b16a; --golge: rgba(0, 0, 0, 0.6); color-scheme: dark; }
+}
+* { box-sizing: border-box; }
+html { -webkit-text-size-adjust: 100%; }
+body { margin: 0; background: var(--kagit); color: var(--murekkep); font-family: var(--govde); font-size: 1.05rem;
+       line-height: 1.6; font-optical-sizing: auto; min-height: 100vh; display: flex; flex-direction: column; }
+main { flex: 1 0 auto; }
+a { color: var(--cuha); text-underline-offset: 0.18em; text-decoration-thickness: 1px; }
+a:focus-visible { outline: 2px solid var(--gece-vurgu); outline-offset: 3px; border-radius: 3px; }
+img { max-width: 100%; height: auto; display: block; }
+h1, h2, h3 { font-family: var(--baslik); text-wrap: balance; line-height: 1.15; margin: 0; }
+.ic { max-width: 72rem; margin: 0 auto; padding-inline: max(1rem, 3vw); }
+
+/* Dil seçimi: html[data-dil] yalnız o dilin bloklarını gösterir; betik yoksa bütün diller alt alta görünür */
+html[data-dil] .dil { display: none; }
+html[data-dil="tr"] .dil[lang="tr"] { display: revert; }
+html[data-dil="en"] .dil[lang="en"] { display: revert; }
+html[data-dil="fr"] .dil[lang="fr"] { display: revert; }
+html[data-dil="de"] .dil[lang="de"] { display: revert; }
+html[data-dil="es"] .dil[lang="es"] { display: revert; }
+html[data-dil="pt"] .dil[lang="pt"] { display: revert; }
+html[data-dil="it"] .dil[lang="it"] { display: revert; }
+
+.ust { background: var(--gece); color: var(--gece-yazi); }
+.ust .ic { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 0.6rem 1.5rem;
+           padding-block: 0.85rem; }
+.marka { display: flex; align-items: center; gap: 0.7rem; color: inherit; text-decoration: none;
+         font-family: var(--baslik); font-weight: 600; font-size: 1.15rem; }
+.marka img { width: 2.1rem; height: 2.1rem; border-radius: 0.5rem; }
+.diller { display: flex; flex-wrap: wrap; gap: 0.3rem; font-family: var(--yardimci); font-size: 0.8rem; }
+.diller a { color: var(--gece-soluk); text-decoration: none; padding: 0.22rem 0.55rem; border-radius: 999px;
+            border: 1px solid transparent; }
+.diller a:hover { color: var(--gece-yazi); border-color: rgba(220, 187, 124, 0.35); }
+html[data-dil="tr"] .diller a[data-dil="tr"] { color: var(--gece); background: var(--gece-vurgu); }
+html[data-dil="en"] .diller a[data-dil="en"] { color: var(--gece); background: var(--gece-vurgu); }
+html[data-dil="fr"] .diller a[data-dil="fr"] { color: var(--gece); background: var(--gece-vurgu); }
+html[data-dil="de"] .diller a[data-dil="de"] { color: var(--gece); background: var(--gece-vurgu); }
+html[data-dil="es"] .diller a[data-dil="es"] { color: var(--gece); background: var(--gece-vurgu); }
+html[data-dil="pt"] .diller a[data-dil="pt"] { color: var(--gece); background: var(--gece-vurgu); }
+html[data-dil="it"] .diller a[data-dil="it"] { color: var(--gece); background: var(--gece-vurgu); }
+
+.kahraman { background: var(--gece); color: var(--gece-yazi); overflow: hidden; padding-block: clamp(2rem, 5vw, 4.5rem) clamp(2.5rem, 6vw, 5rem); }
+.kahraman .ic { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 7fr); gap: clamp(1.5rem, 4vw, 3.5rem);
+                align-items: center; }
+.kahraman h1 { font-size: clamp(2.4rem, 5.5vw, 4.2rem); font-weight: 650; letter-spacing: -0.01em; }
+.kahraman .alt-baslik { font-family: var(--baslik); font-style: italic; color: var(--gece-vurgu);
+                        font-size: clamp(1.25rem, 2.4vw, 1.7rem); margin: 0.35rem 0 1.2rem; }
+.kahraman .giris { color: var(--gece-soluk); margin: 0; max-width: 34rem; }
+.kahraman img { border-radius: 0.7rem; box-shadow: 0 1.5rem 3.5rem -1rem rgba(0, 0, 0, 0.7); }
+.gecis { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 0.6rem; font-family: var(--yardimci); font-size: 0.9rem; }
+.dugme { display: inline-block; padding: 0.55rem 1rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; }
+.dugme.dolu { background: var(--gece-vurgu); color: var(--gece); }
+.dugme.cizgili { border: 1px solid rgba(220, 187, 124, 0.45); color: var(--gece-yazi); }
+
+section.bolum { padding-block: clamp(2.5rem, 5vw, 4rem); }
+section.bolum + section.bolum { border-top: 1px solid var(--cizgi); }
+.bolum h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); font-weight: 600; margin-bottom: 1.1rem; }
+.bolum .onsoz { max-width: 44rem; color: var(--soluk); margin: 0 0 1.8rem; }
+
+.galeri { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 1.2rem; margin: 0; }
+.galeri figure { margin: 0; }
+.galeri img { border-radius: 0.5rem; box-shadow: 0 0.8rem 1.8rem -1rem var(--golge); }
+.galeri figcaption { font-family: var(--yardimci); font-size: 0.85rem; color: var(--soluk); margin-top: 0.55rem; }
+
+.kartlar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
+.kart { background: var(--kagit-2); border-radius: 0.6rem; padding: 1.3rem 1.4rem 1.2rem; }
+.kart h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+.kart p { margin: 0; }
+
+.kitaplar { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--cizgi); }
+.kitaplar li { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) auto; gap: 0.4rem 1.2rem;
+               align-items: baseline; padding: 0.85rem 0; border-bottom: 1px solid var(--cizgi); }
+.kitaplar .k-dil { font-family: var(--yardimci); font-weight: 600; font-size: 0.9rem; }
+.kitaplar .k-ad { font-family: var(--baslik); font-size: 1.1rem; }
+.kitaplar .k-bag { font-family: var(--yardimci); font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.3rem 1rem;
+                   justify-content: flex-end; }
+.kitaplar .k-bag span { color: var(--soluk); }
+.kitaplar li.bu { background: linear-gradient(90deg, var(--kagit-2), transparent); }
+.kitaplar li.bu .k-dil { color: var(--pirinc); }
+
+.iki { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3rem; }
+.iki h2 { font-size: 1.5rem; }
+.iki ul { margin: 0; padding-left: 1.2rem; }
+
+.alt { background: var(--gece); color: var(--gece-soluk); font-family: var(--yardimci); font-size: 0.85rem; }
+.alt .ic { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 0.5rem 2rem; padding-block: 1.4rem; }
+.alt a { color: var(--gece-vurgu); }
+
+.gizlilik { max-width: 44rem; padding-block: clamp(2.5rem, 5vw, 4rem); }
+.gizlilik h1 { font-size: clamp(1.9rem, 4vw, 2.6rem); font-weight: 600; margin-bottom: 0.4rem; }
+.gizlilik .tarih { font-family: var(--yardimci); font-size: 0.9rem; color: var(--soluk); margin: 0 0 1.6rem; }
+.gizlilik li { margin: 0.45rem 0; }
+
+@media (max-width: 52rem) {
+  .kahraman .ic, .iki { grid-template-columns: minmax(0, 1fr); }
+  .galeri { grid-template-columns: minmax(0, 1fr); }
+  .kartlar { grid-template-columns: minmax(0, 1fr); }
+  .kitaplar li { grid-template-columns: minmax(0, 1fr); }
+  .kitaplar .k-bag { justify-content: flex-start; }
+}
 </style>
+<script>(function () {
+  var D = ["tr", "en", "fr", "de", "es", "pt", "it"], d = null;
+  try { var q = String(new URLSearchParams(location.search).get("lang")).slice(0, 2).toLowerCase(); if (D.indexOf(q) >= 0) d = q; } catch (e) {}
+  if (!d) { try { var s = localStorage.getItem("pulzar-dil"); if (D.indexOf(s) >= 0) d = s; } catch (e) {} }
+  if (!d) { var l = navigator.languages || [navigator.language || ""];
+            for (var i = 0; i < l.length && !d; i++) { var k = String(l[i]).slice(0, 2).toLowerCase(); if (D.indexOf(k) >= 0) d = k; } }
+  d = d || "en";
+  document.documentElement.setAttribute("data-dil", d);
+  document.documentElement.lang = d;
+})();</script>
 </head>
 <body>
-
-<h1>Pul ve Zar – Gizlilik Politikası</h1>
-<p class="date">Son güncelleme: 24 Eylül 2026</p>
-
-<p>Pul ve Zar hiçbir kişisel veri toplamaz, saklamaz ya da üçüncü taraflarla paylaşmaz.</p>
-<ul>
-  <li>Uygulama internete bağlanmaz; hesap, kayıt ya da oturum açma gerektirmez.</li>
-  <li>Ayarlarınız, oyun istatistikleriniz ve kaydedilen maç yalnızca bu bilgisayarda, uygulamanın kendi klasöründe saklanır. Bu veriler cihazınızdan dışarı çıkmaz.</li>
-  <li>Reklam, analitik ya da izleme (takip) teknolojisi ve üçüncü taraf yazılım kitaplığı kullanılmaz.</li>
-  <li>“Hakkında” bölümündeki e-posta bağlantısı yalnızca sizin Mail uygulamanızı açar; uygulama e-posta adresinizi görmez.</li>
-</ul>
-<p>Sorularınız için: <a href="mailto:hasan_altintas@hotmail.com">hasan_altintas@hotmail.com</a></p>
-
-<hr>
-
-<h1 lang="en">Checkers and Dice – Privacy Policy</h1>
-<p class="date" lang="en">Last updated: September 24, 2026</p>
-
-<div lang="en">
-<p>Checkers and Dice does not collect, store or share any personal data.</p>
-<ul>
-  <li>The app never connects to the internet and requires no account, registration or sign-in.</li>
-  <li>Your settings, game statistics and the saved match are stored only on this computer, in the app's own folder. This data never leaves your device.</li>
-  <li>No advertising, analytics or tracking technology and no third-party software libraries are used.</li>
-  <li>The email link in the “About” section only opens your Mail app; the app never sees your email address.</li>
-</ul>
-<p>Questions: <a href="mailto:hasan_altintas@hotmail.com">hasan_altintas@hotmail.com</a></p>
-</div>
-
+<header class="ust"><div class="ic"><a class="marka" href="./"><img src="simge.png" alt="" width="36" height="36"><span class="dil" lang="tr">Pul ve Zar</span><span class="dil" lang="en">Checkers and Dice</span><span class="dil" lang="fr">Pions et Dés</span><span class="dil" lang="de">Steine und Würfel</span><span class="dil" lang="es">Fichas y Dados</span><span class="dil" lang="pt">Peças e Dados</span><span class="dil" lang="it">Pedine e Dadi</span></a><nav class="diller" aria-label="Language"><a href="?lang=tr" hreflang="tr" lang="tr" data-dil="tr">Türkçe</a><a href="?lang=en" hreflang="en" lang="en" data-dil="en">English</a><a href="?lang=fr" hreflang="fr" lang="fr" data-dil="fr">Français</a><a href="?lang=de" hreflang="de" lang="de" data-dil="de">Deutsch</a><a href="?lang=es" hreflang="es" lang="es" data-dil="es">Español</a><a href="?lang=pt" hreflang="pt" lang="pt" data-dil="pt">Português (Brasil)</a><a href="?lang=it" hreflang="it" lang="it" data-dil="it">Italiano</a></nav></div></header>
+<main>
+<div class="dil" lang="tr"><article class="ic gizlilik"><h1>Pul ve Zar – Gizlilik Politikası</h1><p class="tarih">Son güncelleme: 29 Eylül 2026</p><p>Pul ve Zar hiçbir kişisel veri toplamaz, saklamaz ya da üçüncü taraflarla paylaşmaz.</p><ul><li>Uygulama internete bağlanmaz; hesap, kayıt ya da oturum açma gerektirmez.</li><li>Ayarlarınız, oyun istatistikleriniz, kayıtlı maçlarınız ve maç arşiviniz yalnızca bu bilgisayarda, uygulamanın kendi klasöründe saklanır. Bu veriler cihazınızdan dışarı çıkmaz.</li><li>Reklam, analitik ya da izleme (takip) teknolojisi ve üçüncü taraf yazılım kitaplığı kullanılmaz.</li><li>“Hakkında” bölümündeki e-posta bağlantısı yalnızca sizin Mail uygulamanızı açar; uygulama e-posta adresinizi görmez.</li></ul><p>Sorularınız için: <a href="mailto:hasan_altintas@hotmail.com">hasan_altintas@hotmail.com</a></p><p><a href="./?lang=tr">Ana sayfa</a></p></article></div>
+<div class="dil" lang="en"><article class="ic gizlilik"><h1>Checkers and Dice – Privacy Policy</h1><p class="tarih">Last updated: September 29, 2026</p><p>Checkers and Dice does not collect, store or share any personal data.</p><ul><li>The app never connects to the internet and requires no account, registration or sign-in.</li><li>Your settings, game statistics, saved matches and match archive are stored only on this computer, in the app's own folder. This data never leaves your device.</li><li>No advertising, analytics or tracking technology and no third-party software libraries are used.</li><li>The email link in the “About” section only opens your Mail app; the app never sees your email address.</li></ul><p>Questions: <a href="mailto:hasan_altintas@hotmail.com">hasan_altintas@hotmail.com</a></p><p><a href="./?lang=en">Home</a></p></article></div>
+<div class="dil" lang="fr"><article class="ic gizlilik"><h1>Pions et Dés – Politique de confidentialité</h1><p class="tarih">Dernière mise à jour : 29 septembre 2026</p><p>Pions et Dés ne collecte, ne stocke et ne partage aucune donnée personnelle.</p><ul><li>L’app ne se connecte jamais à Internet et ne demande ni compte, ni inscription, ni connexion.</li><li>Vos réglages, vos statistiques de jeu, vos matchs enregistrés et leurs archives sont stockés uniquement sur ce Mac, dans le dossier propre à l’app. Ces données ne quittent jamais votre appareil.</li><li>Aucune technologie de publicité, d’analyse ou de suivi n’est utilisée, ni aucune bibliothèque logicielle tierce.</li><li>Le lien e-mail de la section « À propos » ouvre seulement votre app Mail ; l’app ne voit jamais votre adresse e-mail.</li></ul><p>Questions : <a href="mailto:hasan_altintas@hotmail.com">hasan_altintas@hotmail.com</a></p><p><a href="./?lang=fr">Accueil</a></p></article></div>
+<div class="dil" lang="de"><article class="ic gizlilik"><h1>Steine und Würfel – Datenschutzerklärung</h1><p class="tarih">Zuletzt aktualisiert: 29. September 2026</p><p>Steine und Würfel erhebt, speichert und teilt keinerlei personenbezogene Daten.</p><ul><li>Die App stellt nie eine Verbindung zum Internet her und benötigt weder Konto noch Registrierung oder Anmeldung.</li><li>Deine Einstellungen, Spielstatistiken, gespeicherten Matches und das Match-Archiv liegen nur auf diesem Mac, im eigenen Ordner der App. Diese Daten verlassen dein Gerät nie.</li><li>Es werden keine Werbe-, Analyse- oder Tracking-Technologien und keine Softwarebibliotheken von Drittanbietern verwendet.</li><li>Der E-Mail-Link im Bereich „Über“ öffnet nur deine Mail-App; die App sieht deine E-Mail-Adresse nie.</li></ul><p>Fragen: <a href="mailto:hasan_altintas@hotmail.com">hasan_altintas@hotmail.com</a></p><p><a href="./?lang=de">Startseite</a></p></article></div>
+<div class="dil" lang="es"><article class="ic gizlilik"><h1>Fichas y Dados – Política de privacidad</h1><p class="tarih">Última actualización: 29 de septiembre de 2026</p><p>Fichas y Dados no recopila, almacena ni comparte ningún dato personal.</p><ul><li>La app nunca se conecta a internet y no requiere cuenta, registro ni inicio de sesión.</li><li>Tus ajustes, tus estadísticas de juego, tus partidas guardadas y el archivo de partidas se almacenan solo en este Mac, en la carpeta propia de la app. Estos datos nunca salen de tu dispositivo.</li><li>No se usan tecnologías de publicidad, análisis ni seguimiento, ni bibliotecas de software de terceros.</li><li>El enlace de correo de la sección «Acerca de» solo abre tu app Mail; la app nunca ve tu dirección de correo.</li></ul><p>Preguntas: <a href="mailto:hasan_altintas@hotmail.com">hasan_altintas@hotmail.com</a></p><p><a href="./?lang=es">Inicio</a></p></article></div>
+<div class="dil" lang="pt"><article class="ic gizlilik"><h1>Peças e Dados – Política de Privacidade</h1><p class="tarih">Última atualização: 29 de setembro de 2026</p><p>Peças e Dados não coleta, armazena nem compartilha nenhum dado pessoal.</p><ul><li>O app nunca se conecta à internet e não exige conta, cadastro nem login.</li><li>Seus ajustes, suas estatísticas de jogo, suas partidas salvas e o arquivo de partidas ficam guardados apenas neste Mac, na pasta do próprio app. Esses dados nunca saem do seu dispositivo.</li><li>Não são usadas tecnologias de publicidade, análise ou rastreamento, nem bibliotecas de software de terceiros.</li><li>O link de e-mail na seção “Sobre” apenas abre o seu app Mail; o app nunca vê o seu endereço de e-mail.</li></ul><p>Dúvidas: <a href="mailto:hasan_altintas@hotmail.com">hasan_altintas@hotmail.com</a></p><p><a href="./?lang=pt">Início</a></p></article></div>
+<div class="dil" lang="it"><article class="ic gizlilik"><h1>Pedine e Dadi – Informativa sulla privacy</h1><p class="tarih">Ultimo aggiornamento: 29 settembre 2026</p><p>Pedine e Dadi non raccoglie, conserva né condivide alcun dato personale.</p><ul><li>L’app non si connette mai a Internet e non richiede account, registrazione né accesso.</li><li>Le tue impostazioni, le statistiche di gioco, i match salvati e il loro archivio sono conservati solo su questo Mac, nella cartella dell’app. Questi dati non lasciano mai il tuo dispositivo.</li><li>Non vengono usate tecnologie pubblicitarie, di analisi o di tracciamento, né librerie software di terze parti.</li><li>Il link e-mail nella sezione «Informazioni» apre soltanto la tua app Mail; l’app non vede mai il tuo indirizzo e-mail.</li></ul><p>Domande: <a href="mailto:hasan_altintas@hotmail.com">hasan_altintas@hotmail.com</a></p><p><a href="./?lang=it">Home</a></p></article></div>
+</main>
+<footer class="alt"><div class="dil" lang="tr"><div class="ic"><span>© 2026 Hasan Altıntaş</span><span><a href="./?lang=tr">Ana sayfa</a> · <a href="privacy-policy.html?lang=tr">Gizlilik Politikası</a></span></div></div><div class="dil" lang="en"><div class="ic"><span>© 2026 Hasan Altıntaş</span><span><a href="./?lang=en">Home</a> · <a href="privacy-policy.html?lang=en">Privacy Policy</a></span></div></div><div class="dil" lang="fr"><div class="ic"><span>© 2026 Hasan Altıntaş</span><span><a href="./?lang=fr">Accueil</a> · <a href="privacy-policy.html?lang=fr">Politique de confidentialité</a></span></div></div><div class="dil" lang="de"><div class="ic"><span>© 2026 Hasan Altıntaş</span><span><a href="./?lang=de">Startseite</a> · <a href="privacy-policy.html?lang=de">Datenschutzerklärung</a></span></div></div><div class="dil" lang="es"><div class="ic"><span>© 2026 Hasan Altıntaş</span><span><a href="./?lang=es">Inicio</a> · <a href="privacy-policy.html?lang=es">Política de privacidad</a></span></div></div><div class="dil" lang="pt"><div class="ic"><span>© 2026 Hasan Altıntaş</span><span><a href="./?lang=pt">Início</a> · <a href="privacy-policy.html?lang=pt">Política de Privacidade</a></span></div></div><div class="dil" lang="it"><div class="ic"><span>© 2026 Hasan Altıntaş</span><span><a href="./?lang=it">Home</a> · <a href="privacy-policy.html?lang=it">Informativa sulla privacy</a></span></div></div></footer>
+<script>(function () {
+  var B = {"tr": "Pul ve Zar – Gizlilik Politikası", "en": "Checkers and Dice – Privacy Policy", "fr": "Pions et Dés – Politique de confidentialité", "de": "Steine und Würfel – Datenschutzerklärung", "es": "Fichas y Dados – Política de privacidad", "pt": "Peças e Dados – Política de Privacidade", "it": "Pedine e Dadi – Informativa sulla privacy"}, E = {"tr": "Dil", "en": "Language", "fr": "Langue", "de": "Sprache", "es": "Idioma", "pt": "Idioma", "it": "Lingua"};
+  function uygula(d) {
+    document.documentElement.setAttribute("data-dil", d);
+    document.documentElement.lang = d;
+    document.title = B[d];
+    var n = document.querySelector(".diller"); if (n) n.setAttribute("aria-label", E[d]);
+    document.querySelectorAll(".diller a").forEach(function (a) {
+      if (a.getAttribute("data-dil") === d) a.setAttribute("aria-current", "true"); else a.removeAttribute("aria-current");
+    });
+  }
+  uygula(document.documentElement.getAttribute("data-dil"));
+  document.querySelectorAll(".diller a").forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      e.preventDefault();
+      var d = a.getAttribute("data-dil");
+      uygula(d);
+      try { localStorage.setItem("pulzar-dil", d); } catch (x) {}
+      try { history.replaceState(null, "", "?lang=" + d); } catch (x) {}
+    });
+  });
+})();</script>
 </body>
 </html>
