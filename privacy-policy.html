@@ -71,8 +71,14 @@ html[data-dil="it"] .diller a[data-dil="it"] { color: var(--gece); background: v
 .kahraman .alt-baslik { font-family: var(--baslik); font-style: italic; color: var(--gece-vurgu);
                         font-size: clamp(1.25rem, 2.4vw, 1.7rem); margin: 0.35rem 0 1.2rem; }
 .kahraman .giris { color: var(--gece-soluk); margin: 0; max-width: 34rem; }
-.kahraman img { border-radius: 0.7rem; box-shadow: 0 1.5rem 3.5rem -1rem rgba(0, 0, 0, 0.7); }
+.kahraman .ic > img { border-radius: 0.7rem; box-shadow: 0 1.5rem 3.5rem -1rem rgba(0, 0, 0, 0.7); }
 .gecis { margin-top: 1.6rem; display: flex; flex-wrap: wrap; gap: 0.6rem; font-family: var(--yardimci); font-size: 0.9rem; }
+/* App Store rozeti kendi satırında, düğmelerin üstünde; Apple'ın rozeti olduğu gibi: 40 px yükseklik, yuvarlatma ve
+   gölge yok, çevresinde en az çeyrek yükseklik boşluk */
+.magaza { margin: 1.6rem 0 0; }
+.magaza + .gecis { margin-top: 0.9rem; }
+.rozet { display: inline-block; }
+.rozet img { display: block; height: 40px; width: auto; border-radius: 0; box-shadow: none; }
 .dugme { display: inline-block; padding: 0.55rem 1rem; border-radius: 0.5rem; text-decoration: none; font-weight: 500; }
 .dugme.dolu { background: var(--gece-vurgu); color: var(--gece); }
 .dugme.cizgili { border: 1px solid rgba(220, 187, 124, 0.45); color: var(--gece-yazi); }
