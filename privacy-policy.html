@@ -98,21 +98,64 @@ section.bolum + section.bolum { border-top: 1px solid var(--cizgi); }
 .galeri img { border-radius: 0.5rem; box-shadow: 0 0.8rem 1.8rem -1rem var(--golge); }
 .galeri figcaption { font-family: var(--yardimci); font-size: 0.85rem; color: var(--soluk); margin-top: 0.55rem; }
 
+/* Simgeler: CSS maskesi (Safari için -webkit- ile), rengi currentColor */
+.ikon { display: inline-block; width: 1.5rem; height: 1.5rem; flex: none; background-color: currentColor;
+        -webkit-mask: var(--ikon) center / contain no-repeat; mask: var(--ikon) center / contain no-repeat; }
+
+/* Öne çıkanlar: altı kart, ikişerli üç satır (oyun, gelişme, görsellik ve ses), simgeli */
 .kartlar { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.2rem; }
-.kart { background: var(--kagit-2); border-radius: 0.6rem; padding: 1.3rem 1.4rem 1.2rem; }
-.kart h3 { font-size: 1.25rem; font-weight: 600; margin-bottom: 0.5rem; }
+.kart { background: var(--kagit-2); border-radius: 0.7rem; padding: 1.5rem 1.6rem 1.4rem; }
+.kart .ikon { width: 2.1rem; height: 2.1rem; color: var(--cuha); margin-bottom: 0.9rem; }
+.kart h3 { font-size: 1.3rem; font-weight: 600; margin-bottom: 0.45rem; }
 .kart p { margin: 0; }
 
-.kitaplar { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--cizgi); }
-.kitaplar li { display: grid; grid-template-columns: minmax(0, 11rem) minmax(0, 1fr) auto; gap: 0.4rem 1.2rem;
-               align-items: baseline; padding: 0.85rem 0; border-bottom: 1px solid var(--cizgi); }
-.kitaplar .k-dil { font-family: var(--yardimci); font-weight: 600; font-size: 0.9rem; }
-.kitaplar .k-ad { font-family: var(--baslik); font-size: 1.1rem; }
-.kitaplar .k-bag { font-family: var(--yardimci); font-size: 0.9rem; display: flex; flex-wrap: wrap; gap: 0.3rem 1rem;
-                   justify-content: flex-end; }
-.kitaplar .k-bag span { color: var(--soluk); }
-.kitaplar li.bu { background: linear-gradient(90deg, var(--kagit-2), transparent); }
-.kitaplar li.bu .k-dil { color: var(--pirinc); }
+/* Özellikler: mağaza açıklamasının sekiz grubu, dergi düzeninde sütunlar */
+.ozellikler .onsoz { margin-bottom: 2.2rem; }
+/* İki sütun: okuma için uygun satır uzunluğu (~70 harf); gruplar bölünmez, en büyük grup (analiz) iki sütunu dengeler */
+.gruplar { columns: 2 22rem; column-gap: clamp(2.2rem, 5vw, 4rem); }
+/* Boşluk dolgu olarak: sütun kırılmasında kenar payı bir sonraki sütunun tepesine taşınmasın (WebKit) */
+.grup { break-inside: avoid; margin: 0; padding-bottom: 2.2rem; }
+.grup h3 { display: flex; align-items: center; gap: 0.6rem; font-family: var(--yardimci); font-size: 0.8rem;
+           font-weight: 600; letter-spacing: 0.09em; line-height: 1.35; color: var(--pirinc); margin: 0 0 0.85rem;
+           padding-bottom: 0.65rem; border-bottom: 1px solid var(--cizgi); }
+.grup h3 .ikon { width: 1.35rem; height: 1.35rem; color: var(--cuha); }
+.grup ul { list-style: none; margin: 0; padding: 0; }
+.grup li { position: relative; padding-left: 1.2rem; margin: 0 0 0.6rem; font-size: 0.98rem; line-height: 1.55; }
+/* Madde işareti küçük bir pul: dolu daire ve ince halka */
+.grup li::before { content: ""; position: absolute; left: 0.1rem; top: 0.55em; width: 0.5rem; height: 0.5rem;
+                   border-radius: 50%; background: var(--cuha); box-shadow: 0 0 0 2px var(--kagit), 0 0 0 3px var(--cizgi); }
+.grup li strong { font-weight: 600; }
+.grup p { margin: 0; font-size: 0.98rem; line-height: 1.55; }
+
+/* Kitap: o dilin kitabı (baskı kapağının küçük eşi) ve öbür dillere bir satır */
+.kitap-vitrin { display: grid; grid-template-columns: minmax(0, 15rem) minmax(0, 1fr); gap: clamp(1.8rem, 5vw, 4rem);
+                align-items: center; }
+.kapak { display: block; position: relative; aspect-ratio: 17 / 24; overflow: hidden; border-radius: 0.2rem 0.45rem 0.45rem 0.2rem;
+         background: #0f0c09; color: #f5efe3; text-decoration: none; transform: rotate(-1.2deg);
+         box-shadow: 0 1.6rem 2.8rem -1.2rem rgba(20, 14, 8, 0.55), 0 0.2rem 0.5rem rgba(20, 14, 8, 0.18); }
+.kapak img { position: absolute; left: 0; right: 0; bottom: 0; width: 100%; height: 63%; object-fit: cover; }
+/* Kapağın üst yarısı görüntüye yumuşakça iner (baskıdaki gibi); sol kenarda cilt gölgesi */
+.kapak::before { content: ""; position: absolute; left: 0; right: 0; top: 36.5%; height: 15%; z-index: 1;
+                 background: linear-gradient(180deg, #0f0c09 0%, rgba(14, 10, 7, 0.5) 50%, rgba(14, 10, 7, 0) 100%); }
+.kapak::after { content: ""; position: absolute; inset: 0 auto 0 0; width: 7%; z-index: 2;
+                background: linear-gradient(90deg, rgba(0, 0, 0, 0.35), rgba(255, 255, 255, 0.06) 55%, rgba(0, 0, 0, 0)); }
+.kapak-yazi { position: absolute; left: 0; right: 0; top: 0; z-index: 3; padding: 13% 11% 0 13%; display: block; }
+.kapak-ad { display: block; font-family: var(--baslik); font-weight: 650; font-size: 1.62rem; line-height: 0.98;
+            letter-spacing: -0.01em; text-wrap: balance; }
+.kapak-alt { display: block; font-family: var(--baslik); font-style: italic; font-size: 1rem; color: #dcbb7c;
+             margin-top: 0.35rem; }
+.kapak-yazar { display: block; font-family: var(--yardimci); font-size: 0.5rem; font-weight: 500; letter-spacing: 0.2em;
+               text-transform: uppercase; color: #dcbb7c; margin-top: 0.9rem; }
+.kitap-metin h2 { margin-bottom: 0.9rem; }
+.kitap-metin .onsoz { margin-bottom: 1.5rem; }
+.k-dugmeler { display: flex; flex-wrap: wrap; gap: 0.6rem; margin: 0; font-family: var(--yardimci); font-size: 0.92rem; }
+.dugme.birincil { background: var(--cuha); color: var(--kagit); }
+.dugme.ikincil { border: 1px solid var(--cizgi); color: var(--murekkep); }
+.dugme.ikincil:hover { border-color: var(--soluk); }
+.k-bilgi { font-family: var(--yardimci); font-size: 0.85rem; color: var(--soluk); margin: 0.8rem 0 0; }
+.k-diger { font-family: var(--yardimci); font-size: 0.85rem; color: var(--soluk); margin: 1.6rem 0 0; padding-top: 1rem;
+           border-top: 1px solid var(--cizgi); line-height: 1.9; }
+.k-diger a { white-space: nowrap; }
 
 .iki { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 2rem 3rem; }
 .iki h2 { font-size: 1.5rem; }
@@ -131,10 +174,22 @@ section.bolum + section.bolum { border-top: 1px solid var(--cizgi); }
   .kahraman .ic, .iki { grid-template-columns: minmax(0, 1fr); }
   .galeri { grid-template-columns: minmax(0, 1fr); }
   .kartlar { grid-template-columns: minmax(0, 1fr); }
-  .kitaplar li { grid-template-columns: minmax(0, 1fr); }
-  .kitaplar .k-bag { justify-content: flex-start; }
+  .kitap-vitrin { grid-template-columns: minmax(0, 1fr); justify-items: start; }
+  .kapak { width: min(13rem, 62vw); }
 }
-</style>
+@media (prefers-color-scheme: dark) {
+  .kapak { box-shadow: 0 1.6rem 2.8rem -1.2rem rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(245, 239, 227, 0.08); }
+}
+.ikon-kurallar { --ikon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223%22%20y%3D%224%22%20width%3D%2218%22%20height%3D%2216%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M6%204l1.6%206.5L9.2%204M14.8%204l1.6%206.5L18%204M6%2020l1.6-6.5L9.2%2020M14.8%2020l1.6-6.5L18%2020M12%204v16%22/%3E%3C/svg%3E"); }
+.ikon-zar { --ikon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Crect%20x%3D%223.5%22%20y%3D%223.5%22%20width%3D%2217%22%20height%3D%2217%22%20rx%3D%223.5%22/%3E%3Ccircle%20cx%3D%228.3%22%20cy%3D%228.3%22%20r%3D%221.25%22%20fill%3D%22%23000%22%20stroke%3D%22none%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%221.25%22%20fill%3D%22%23000%22%20stroke%3D%22none%22/%3E%3Ccircle%20cx%3D%2215.7%22%20cy%3D%2215.7%22%20r%3D%221.25%22%20fill%3D%22%23000%22%20stroke%3D%22none%22/%3E%3C/svg%3E"); }
+.ikon-rakip { --ikon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%225%22%20cy%3D%227%22%20r%3D%221.7%22/%3E%3Ccircle%20cx%3D%225%22%20cy%3D%2217%22%20r%3D%221.7%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%224.5%22%20r%3D%221.7%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%221.7%22/%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2219.5%22%20r%3D%221.7%22/%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%2212%22%20r%3D%221.7%22/%3E%3Cpath%20d%3D%22M6.6%206.2l3.8-1.2M6.5%208l4%203M6.5%2016l4-3M6.6%2017.8l3.8%201.2M13.7%2012h3.6M13.3%205.8l4.4%205M13.3%2018.2l4.4-5%22/%3E%3C/svg%3E"); }
+.ikon-analiz { --ikon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M4%203.5v16.5h16.5%22/%3E%3Cpath%20d%3D%22M7.5%2015.5l3.5-4.5%203%202.5%205-7%22/%3E%3Ccircle%20cx%3D%2219%22%20cy%3D%226.5%22%20r%3D%220.9%22%20fill%3D%22%23000%22%20stroke%3D%22none%22/%3E%3C/svg%3E"); }
+.ikon-calisma { --ikon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M7.5%206.5V5a2%202%200%200%201%202-2h9a2%202%200%200%201%202%202v10a2%202%200%200%201-2%202H17%22/%3E%3Crect%20x%3D%224%22%20y%3D%226.5%22%20width%3D%2213%22%20height%3D%2214%22%20rx%3D%222%22/%3E%3Cpath%20d%3D%22M8.4%2011.4a2.1%202.1%200%201%201%203.3%201.7c-.8.5-1.2%201-1.2%201.8v.4%22/%3E%3Ccircle%20cx%3D%2210.5%22%20cy%3D%2217.4%22%20r%3D%220.95%22%20fill%3D%22%23000%22%20stroke%3D%22none%22/%3E%3C/svg%3E"); }
+.ikon-gorsel { --ikon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%202.5v4.5%22/%3E%3Cpath%20d%3D%22M5.5%2014a6.5%206.5%200%200%201%2013%200z%22/%3E%3Cpath%20d%3D%22M10%2017.2a2%202%200%200%200%204%200%22/%3E%3Cpath%20d%3D%22M4%2020.5h16%22/%3E%3C/svg%3E"); }
+.ikon-ses { --ikon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M9%2017.5V6l10-2.5v11.5%22/%3E%3Ccircle%20cx%3D%226.8%22%20cy%3D%2217.5%22%20r%3D%222.3%22/%3E%3Ccircle%20cx%3D%2216.8%22%20cy%3D%2215%22%20r%3D%222.3%22/%3E%3C/svg%3E"); }
+.ikon-oynanis { --ikon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M7%203.5v12.2l3.2-2.9%202.3%205.2%202.2-1-2.3-5.1%204.3-.3z%22/%3E%3C/svg%3E"); }
+.ikon-dil { --ikon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%228.5%22/%3E%3Cpath%20d%3D%22M3.5%2012h17M12%203.5c2.4%202.4%203.6%205.3%203.6%208.5s-1.2%206.1-3.6%208.5M12%203.5C9.6%205.9%208.4%208.8%208.4%2012s1.2%206.1%203.6%208.5%22/%3E%3C/svg%3E"); }
+.ikon-gizlilik { --ikon: url("data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2024%2024%22%20fill%3D%22none%22%20stroke%3D%22%23000%22%20stroke-width%3D%221.6%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M12%203l7%202.8v5.4c0%204.4-2.9%208-7%209.8-4.1-1.8-7-5.4-7-9.8V5.8z%22/%3E%3Cpath%20d%3D%22M9%2012.2l2.2%202.2%204-4.2%22/%3E%3C/svg%3E"); }</style>
 <script>(function () {
   var D = ["tr", "en", "fr", "de", "es", "pt", "it", "el", "ru"], d = null;
   try { var q = String(new URLSearchParams(location.search).get("lang")).slice(0, 2).toLowerCase(); if (D.indexOf(q) >= 0) d = q; } catch (e) {}
